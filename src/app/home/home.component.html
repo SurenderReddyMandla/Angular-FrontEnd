@@ -1,0 +1,14 @@
+
+<div class="row">
+  <div class="column" *ngFor="let places of communityAndHomeData">
+        <div class="card">
+            <h3>{{places.communities.name}}</h3>
+            <h3>Average Price: {{ (places.averagePrice==0) ? 'unavaiilable' : places.averagePrice|currency}}</h3>
+      <img style='width: 340px; height:250px;' src="{{ places.communities.imgUrl }}" onerror="this.onerror=null;this.src='../favicon.ico';">
+    </div>
+  </div>
+
+</div>
+
+
+
