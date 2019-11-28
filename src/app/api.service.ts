@@ -14,7 +14,7 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {
     this.results = [];
    }
-
+// get community data from REST API
   public getCommunityService()
   {
     return this.httpClient.get(this.SERVER_URL+"/communities").pipe(
@@ -23,7 +23,7 @@ export class ApiService {
     );
   }
   
-  
+  // get Home data from REST API
   public getHomeService()
   {
     return this.httpClient.get(this.SERVER_URL+"/homes").pipe(
