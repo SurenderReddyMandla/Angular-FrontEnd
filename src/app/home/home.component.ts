@@ -18,13 +18,15 @@ export class HomeComponent implements OnInit {
     this.getCommunity();
 
   }
-
+// To get the communities information
   getCommunity():void{
     this.apiService.getCommunityService().subscribe((data: any[])=>{   
       this.communities = data;
       this.getHomes();
     })
   }
+  
+   // To get the homes information
   getHomes():void{
 
     this.apiService.getHomeService().subscribe((data: any[])=>{   
@@ -32,6 +34,8 @@ export class HomeComponent implements OnInit {
       this.getCommunityAndHomes();
     })
   }
+  
+  // To calculate average using id in community data and home data
   getCommunityAndHomes()
   {
     this.communities.forEach(community => {
